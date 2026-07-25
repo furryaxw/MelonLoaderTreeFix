@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <AssemblyName>MelonLoaderTreeFix</AssemblyName>
+    <RootNamespace>MelonLoaderTreeFix</RootNamespace>
+    <Version>1.3.1</Version>
+    <Description>MelonLoader fix for Sprocket tree and terrain-grass rendering issues.</Description>
+    <PackageLicenseExpression>GPL-3.0-only</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/furryaxw/MelonLoaderTreeFix</RepositoryUrl>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>..\..\..\MelonLoader\net6\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppInterop.Runtime">
+      <HintPath>..\..\..\MelonLoader\net6\Il2CppInterop.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2Cppmscorlib">
+      <HintPath>..\..\..\MelonLoader\Il2CppAssemblies\Il2Cppmscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem">
+      <HintPath>..\..\..\MelonLoader\Il2CppAssemblies\Il2CppSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppVisualDesignCafe.Rendering.Nature">
+      <HintPath>..\..\..\MelonLoader\Il2CppAssemblies\Il2CppVisualDesignCafe.Rendering.Nature.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppVisualDesignCafe.Rendering.Instancing">
+      <HintPath>..\..\..\MelonLoader\Il2CppAssemblies\Il2CppVisualDesignCafe.Rendering.Instancing.dll</HintPath>
+    </Reference>
+    <Reference Include="MelonLoader">
+      <HintPath>..\..\..\MelonLoader\net6\MelonLoader.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\MelonLoader\Il2CppAssemblies\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="copy /Y &quot;$(TargetPath)&quot; &quot;G:\Sprocket\Mods\&quot;" />
+  </Target>
+
+</Project>
