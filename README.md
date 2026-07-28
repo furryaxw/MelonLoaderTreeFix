@@ -11,9 +11,7 @@
 ## 安装
 
 1. 安装与游戏版本匹配的 MelonLoader。
-2. 构建项目。
-3. 将 `MelonLoaderTreeFix.dll` 放入游戏根目录的 `Mods` 文件夹。
-4. 删除或停用旧的 `Trees.dll`，避免同时加载旧版模组。
+2. 将 `MelonLoaderTreeFix.dll` 放入游戏根目录的 `Mods` 文件夹。
 
 ## 构建
 
