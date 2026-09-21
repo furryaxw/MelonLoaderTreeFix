@@ -1,3 +1,4 @@
+using System.Reflection;
 using HarmonyLib;
 using Il2CppVisualDesignCafe.Rendering.Nature;
 using MelonLoader;
@@ -5,9 +6,16 @@ using MelonLoader;
 [assembly: MelonInfo(
     typeof(MelonLoaderTreeFix.MelonLoaderTreeFixMod),
     "MelonLoaderTreeFix",
-    "1.3.1",
+    "1.3.2",
     "furryAxw")]
 [assembly: MelonGame("HD", "Sprocket")]
+[assembly: AssemblyMetadata("Sprocket.Mod.Id", "furryaxw.melonloader-tree-fix")]
+[assembly: AssemblyMetadata("Sprocket.Mod.DisplayName", "MelonLoader Tree Fix")]
+[assembly: AssemblyMetadata("Sprocket.Mod.Description", "Fixes tree and terrain-grass rendering problems when Sprocket runs through MelonLoader.")]
+[assembly: AssemblyMetadata("Sprocket.Mod.Authors", "furryAxw")]
+[assembly: AssemblyMetadata("Sprocket.Mod.Repository", "furryaxw/MelonLoaderTreeFix")]
+[assembly: AssemblyMetadata("Sprocket.Mod.Category", "visual")]
+[assembly: AssemblyMetadata("Sprocket.Mod.License", "GPL-3.0-only")]
 
 namespace MelonLoaderTreeFix
 {
@@ -15,7 +23,7 @@ namespace MelonLoaderTreeFix
     {
         public override void OnInitializeMelon()
         {
-            LoggerInstance.Msg("已启用 MelonLoaderTreeFix。");
+            LoggerInstance.Msg("[MLTF] ready");
         }
     }
 
