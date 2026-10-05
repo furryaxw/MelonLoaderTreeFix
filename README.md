@@ -1,21 +1,23 @@
 # MelonLoaderTreeFix
 
-适用于《Sprocket》的 MelonLoader 花草树木渲染修复模组。
+[中文](README.zh.md) | **English**
 
-## 功能
+A MelonLoader mod for Sprocket that fixes grass and tree rendering.
 
-- 禁用会导致异常的 Nature Renderer 树木渲染路径。
-- 修复地表植被流式加载队列中偶发的无效单元索引。
-- 限制重复错误日志，避免故障情况下刷屏。
+## Features
 
-## 安装
+- Disables the Nature Renderer tree rendering path that triggers the error.
+- Fixes occasional invalid cell indices in the ground-vegetation streaming load queue.
+- Throttles repeated error logging so a fault does not flood the log.
 
-1. 安装与游戏版本匹配的 MelonLoader。
-2. 将 `MelonLoaderTreeFix.dll` 放入游戏根目录的 `Mods` 文件夹。
+## Installation
 
-## 构建
+1. Install the MelonLoader version that matches your game version.
+2. Place `MelonLoaderTreeFix.dll` into the `Mods` folder in the game root directory.
 
-项目目标框架为 .NET 6，并引用本地 Sprocket MelonLoader/IL2CPP 程序集。默认目录布局为：
+## Building
+
+The project targets .NET 6 and references local Sprocket MelonLoader/IL2CPP assemblies. The default directory layout is:
 
 ```text
 G:\Sprocket\
@@ -27,7 +29,7 @@ G:\Sprocket\
 dotnet build .\MelonLoaderTreeFix\MelonLoaderTreeFix.csproj --configuration Release
 ```
 
-`NatureRendererTargetDump.java` 是开发期间使用的 Ghidra 分析辅助脚本，不参与模组构建。
+`NatureRendererTargetDump.java` is a Ghidra analysis helper script used during development; it is not part of the mod build.
 
 ## License
 
